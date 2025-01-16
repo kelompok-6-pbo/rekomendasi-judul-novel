@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovelFinder - Find Your Next Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">NovelFinder</div>
+        <div class="nav-menu">
+            <a href="#" onclick="showHomePage()" id="homeLink" class="active">Home</a>
+            <a href="#" onclick="showFavorites()" id="favoritesLink">Favorites</a>
+            <div class="user-info">
+                <span id="userDisplay"></span>
+                <button id="logoutBtn" class="btn-logout">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="homeSection">
+            <h1>Find Your Perfect Novel</h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search novels...">
+                <button id="searchBtn">Search</button>
+            </div>
+        </section>
+
+        <section class="genres" id="genreSection">
+            <h2>Select Genre</h2>
+            <div class="genre-buttons">
+                <button onclick="showNovels('romance')">Romance</button>
+                <button onclick="showNovels('fantasy')">Fantasy</button>
+                <button onclick="showNovels('horror')">Horror</button>
+                <button onclick="showNovels('mystery')">Mystery</button>
+                <button onclick="showNovels('adventure')">Adventure</button>
+            </div>
+        </section>
+
+        <section class="novels-display">
+            <h2 id="sectionTitle">Recommended Novels</h2>
+            <div id="novelsContainer" class="novels-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NovelFinder. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
